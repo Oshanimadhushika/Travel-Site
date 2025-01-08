@@ -93,20 +93,43 @@ const VideoSection: React.FC = () => {
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden mb-20  rounded-lg">
-      {loading && <div className="loading-spinner">Loading...</div>}
+      {/* {loading && <div className="loading-spinner">Loading...</div>} */}
+
+      {/* {loading && (
+        <div className="flex items-center justify-center h-20 w-20">
+          <svg
+            className="animate-spin h-10 w-10 text-blue-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v8H4z"
+            ></path>
+          </svg>
+        </div>
+      )} */}
 
       <div
         id="video-frame"
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
       >
-        {/* <div> */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* <div className="mask-clip-path  absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg border-2 border-green-500"> */}
           <div className="mask-clip-path z-50 w-64 h-64 cursor-pointer overflow-hidden rounded-lg ">
             {/* <VideoPreview> */}
             <div
               onClick={handleMiniVdClick}
-              className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in  hover:scale-100 hover:opacity-100 rounded-lg"
+              className="origin-center scale-50 opacity-0 transition-all duration-300 ease-in  hover:scale-100 hover:opacity-100 rounded-lg"
             >
               <video
                 ref={nextVdRef}
@@ -146,8 +169,8 @@ const VideoSection: React.FC = () => {
 
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600">
-              Redefine<span className="text-blue-200 font-black">n</span>e
+            <h1 className="text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-yellow-500 to-pink-200">
+              Redefinene
             </h1>
 
             <p className="mt-4 mb-6 max-w-3xl text-lg leading-relaxed text-blue-100 font-light">
@@ -156,18 +179,9 @@ const VideoSection: React.FC = () => {
                 Metagame Layer
               </span>
               , unleash the{" "}
-              <span className="font-semibold text-purple-400">
-                Play Economy
-              </span>
+              <span className="font-semibold text-green-500">Play Economy</span>
               .
             </p>
-            {/* <h1 className=" text-blue-100 font-bold text-5xl">
-              redefi<b>n</b>e
-            </h1>
-
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-200 text-2xl">
-              Enter the Metagame Layer Unleash the Play Economy
-            </p> */}
           </div>
         </div>
       </div>
