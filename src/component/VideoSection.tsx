@@ -93,7 +93,7 @@ const VideoSection: React.FC = () => {
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden mb-20  rounded-lg">
-      {/* {loading && <div className="loading-spinner">Loading...</div>} */}
+      {loading && <div className="loading-spinner">Loading...</div>}
 
       {/* {loading && (
         <div className="flex items-center justify-center h-20 w-20">
