@@ -83,42 +83,18 @@ const VideoSection: React.FC = () => {
     });
   });
 
-  // const getVideoSrc = (index: number) => `video/hero-${index}.mp4`;
-
   const getVideoSrc = (index: number) => {
     const src = `video/hero-${index}.mp4`;
-    // console.log("Video source:", src);
     return src;
   };
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden mb-20  rounded-lg">
-      {loading && <div className="loading-spinner">Loading...</div>}
-
-      {/* {loading && (
-        <div className="flex items-center justify-center h-20 w-20">
-          <svg
-            className="animate-spin h-10 w-10 text-blue-500"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            ></circle>
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8v8H4z"
-            ></path>
-          </svg>
-        </div>
-      )} */}
+      {loading && (
+        <h1 className="text-l font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-yellow-500 to-pink-500 animate-pulse">
+          Loading...
+        </h1>
+      )}
 
       <div
         id="video-frame"

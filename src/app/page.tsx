@@ -1,5 +1,6 @@
 // "use client";
 
+import AnimationSection from "@/component/AnimationSection";
 import Camp from "@/component/Camp";
 import Features from "@/component/Features";
 import GetApp from "@/component/GetApp";
@@ -17,6 +18,7 @@ export default function Home() {
       <Features />
       <GetApp />
       <VideoSection />
+      <AnimationSection/>
     </>
   );
 }
